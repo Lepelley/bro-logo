@@ -1,4 +1,8 @@
-const logos = ['cray.webp', 'yumi.webp', 'vador.webp', 'drydry.webp', 'dark_vador.webp', 'dray.webp']
+const logos = [
+  'cray.webp', 'yumi.webp', 'vador.webp', 'drydry.webp', 'dark_vador.webp', 'dray.webp', 
+  'drycontent.webp', 'bs.webp', '1186734127714664558.webp', '1186734128914251987.webp', '1186791942609195108.webp',
+  'Anta', 'Cray2', 'crayPog', 'Dray2', 'MFRage', 'Ozi', 'Ozi2', 'Ozi3', 'vador2', 'yumi2'
+]
 
 let dvd = document.getElementById('dvd');
 let interval_id;
@@ -15,7 +19,7 @@ function init() {
 function update_color() {
   random = Math.round((Math.random() * (logos.length - 1)))
   const img = dvd.querySelector('img')
-  img.src = logos[random]
+  img.src = 'logos/' + logos[random]
 
   let color = Math.round((Math.random() * 100));
   dvd.style.fill = `hsl(${color},100%,50%)`;
